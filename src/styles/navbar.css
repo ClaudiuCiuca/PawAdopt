@@ -1,0 +1,31 @@
+nav {
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 24px 32 px;
+}
+
+nav h2 {
+    color: blueviolet;
+    font-size: 32px; 
+    margin-bottom: 24px;
+}
+
+nav div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color:black;
+    font-weight: 700;
+    font-size: 15px;
+    padding-bottom: 8px;
+}
+
+nav a:hover {
+    color: crimson;
+}
