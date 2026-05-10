@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import type { Dog } from "../types/dog.ts";
+import DogCard from "../components/DogCard";
+import "../styles/dog.css"
 
 
 function Dogs() {
 
- const [dogs, setDogs] = useState([]);
+ const [dogs, setDogs] = useState<Dog[]>([]);
  useEffect(() => {
     const fetchDogs = async () => {
         try {
@@ -27,15 +30,10 @@ function Dogs() {
 }, []);
 
 return (
-    <div> 
-        <h1> Dogs looking for a home</h1>
+    <div className="dogs-container"> 
 
-        {dogs.map((dog: any) =>
-         <div key={dog.id}>
-            <h2>{dog.name}</h2>
-            <p>{dog.breed}</p>
-            <img src={dog.image} alt={dog.name} width="250px"/>
-        </div>
+        {dogs.map((dog) =>
+         <DogCard key={dog.id} dog={dog}></DogCard>
         
         )}
     </div>

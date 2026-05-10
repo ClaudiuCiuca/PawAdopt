@@ -1,0 +1,6 @@
+.dogs-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 32px;
+}
