@@ -1,7 +1,7 @@
 {
   "dogs": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Max",
       "breed": "Golden Retriever",
       "age": 2,
@@ -12,9 +12,9 @@
       "description": "Friendly and playful dog looking for a loving home.",
       "vaccinated": true,
       "adoptionFee": 5
-    }, 
+    },
     {
-        "id": 2,
+      "id": "2",
       "name": "Bruno",
       "breed": "Golden Retriever",
       "age": 4,
@@ -25,6 +25,34 @@
       "description": "His dream is to have a new house with lovely people arround",
       "vaccinated": true,
       "adoptionFee": 5
+    },
+    {
+      "name": "Giani",
+      "breed": "Metis",
+      "age": 4,
+      "location": "Iasi",
+      "image": "https://tse3.mm.bing.net/th/id/OIP.WQclLVyJoarVkUfjW1hAUwHaFj?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "description": "I don't have a pedigree but I like a lot Pedigree",
+      "id": "K0LskbDDUXM"
+    },
+    {
+      "name": "Bibi",
+      "breed": "Bichone",
+      "age": 2,
+      "location": "Buzau",
+      "image": "https://puppysingapore.com/wp-content/uploads/2019/06/Bichon-puppy.png",
+      "description": "If you need a toy, adopt me",
+      "id": "RaiPJDxJ7qE"
+    },
+    {
+      "name": "Paco",
+      "breed": "Caniche",
+      "age": 10,
+      "location": "Iasi",
+      "image": "https://tse2.mm.bing.net/th/id/OIP.gnNLlI4VX_kVKjQSEIkedgHaE7?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "description": "Just look into my eyes",
+      "id": "7nMWUtDap6s"
     }
   ]
+  
 }

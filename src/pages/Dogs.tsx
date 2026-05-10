@@ -30,8 +30,10 @@ function Dogs() {
 }, []);
 
 return (
-    <div className="dogs-container"> 
 
+     
+    <div className="dogs-container"> 
+       
         {dogs.map((dog) =>
          <DogCard key={dog.id} dog={dog}></DogCard>
         
