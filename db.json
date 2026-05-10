@@ -12,6 +12,19 @@
       "description": "Friendly and playful dog looking for a loving home.",
       "vaccinated": true,
       "adoptionFee": 5
+    }, 
+    {
+        "id": 2,
+      "name": "Bruno",
+      "breed": "Golden Retriever",
+      "age": 4,
+      "gender": "male",
+      "size": "large",
+      "location": "Bucharest",
+      "image": "https://images.unsplash.com/photo-1552053831-71594a27632d",
+      "description": "His dream is to have a new house with lovely people arround",
+      "vaccinated": true,
+      "adoptionFee": 5
     }
   ]
 }
