@@ -1,0 +1,17 @@
+{
+  "dogs": [
+    {
+      "id": 1,
+      "name": "Max",
+      "breed": "Golden Retriever",
+      "age": 2,
+      "gender": "male",
+      "size": "large",
+      "location": "Bucharest",
+      "image": "https://images.unsplash.com/photo-1552053831-71594a27632d",
+      "description": "Friendly and playful dog looking for a loving home.",
+      "vaccinated": true,
+      "adoptionFee": 5
+    }
+  ]
+}
