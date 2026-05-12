@@ -1,4 +1,13 @@
 {
+  "users": [
+    {
+      "email": "claudiu.ciuca@gmail.com",
+      "password": "$2a$10$B39xJBz7ImoC/Trh6R.pleWu8FMOqSw5b/0VY5EmZuhm.SpEC0ROW",
+      "firstName": "Claudiu",
+      "lastName": "Ciuca",
+      "id": 1
+    }
+  ],
   "dogs": [
     {
       "id": "1",
@@ -44,6 +53,5 @@
       "description": "If you need a toy, adopt me",
       "id": "RaiPJDxJ7qE"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
