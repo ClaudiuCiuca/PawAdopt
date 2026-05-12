@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Dog } from "../types/dog.ts";
+import type { Dog } from "../types/Dog.ts";
 import DogCard from "../components/DogCard";
 import "../styles/dog.css"
 
