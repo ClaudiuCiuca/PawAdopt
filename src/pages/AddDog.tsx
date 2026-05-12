@@ -14,7 +14,9 @@ const navigate = useNavigate();
   const [description, setDescription] = useState("");
   const [vaccinated, setVaccinated] = useState("");
   const [error, setError] = useState("");
-
+  const [gender, setGender] = useState("");
+  const [size, setSize] = useState("");
+  
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -24,7 +26,11 @@ const navigate = useNavigate();
         !breed ||
         !location ||
         !image ||
-        !description
+        !description ||
+        !vaccinated ||
+        !gender ||
+        !size 
+        
       ) { setError ("Please fill in all the fields"); 
 
         return;
@@ -42,10 +48,13 @@ const navigate = useNavigate();
       name,
       breed,
       age,
+      gender,
+      size,
       location,
       image,
       description,
-      vaccinated,
+      vaccinated: vaccinated === "yes",
+
     };
 
     try {
@@ -95,6 +104,29 @@ const navigate = useNavigate();
           onChange={(event) => setAge(Number(event.target.value))}
         />
 
+        <select
+           value={gender}
+           onChange={(event) => setGender(event.target.value)}>
+
+          <option value="" disabled>
+              Gender
+          </option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <select
+          value={size}
+          onChange={(event) => setSize(event.target.value)}>
+
+          <option value="" disabled>
+            Size
+          </option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+
         <input
           type="text"
           placeholder="Location"
@@ -109,7 +141,7 @@ const navigate = useNavigate();
           onChange={(event) => setImage(event.target.value)}
         />
 
-          <select
+        <select
           value={vaccinated}
           onChange={(event) => setVaccinated(event.target.value)}>
 
@@ -124,7 +156,7 @@ const navigate = useNavigate();
           <option value="no">
             No
           </option>
-</select>
+        </select>
 
         <textarea
           placeholder="Description"

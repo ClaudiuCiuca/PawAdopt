@@ -14,7 +14,9 @@ const { id } = useParams();
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [error, setError] = useState("");
-  const [vaccinated, setVaccinated] = useState(false);
+  const [vaccinated, setVaccinated] = useState("");
+  const [gender, setGender] = useState("");
+  const [size, setSize] = useState("");
 
   useEffect(() => {
     const fetchDog = async () => {
@@ -35,7 +37,9 @@ const { id } = useParams();
         setLocation(data.location);
         setImage(data.image);
         setDescription(data.description);
-        setVaccinated(data.vaccinated);
+        setVaccinated(data.vaccinated ? "yes" : "no");
+        setGender(data.gender);
+        setSize(data.size)
       } catch (error) {
         console.log(error);
       }
@@ -52,7 +56,10 @@ const { id } = useParams();
         !breed ||
         !location ||
         !image ||
-        !description
+        !description||
+        !vaccinated||
+        !size||
+        !gender
       ) { setError ("Please fill in all the fields"); 
 
         return;
@@ -74,7 +81,9 @@ const { id } = useParams();
       location,
       image,
       description,
-      vaccinated,
+      vaccinated: vaccinated === "yes",
+      size,
+      gender,
     };
 
     try {
@@ -124,6 +133,27 @@ const { id } = useParams();
           onChange={(event) => setAge(Number(event.target.value))}
         />
 
+        <select
+          value={gender}
+          onChange={(event) => setGender(event.target.value)}>
+          <option value="" disabled>
+            Gender
+          </option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <select
+          value={size}
+          onChange={(event) => setSize(event.target.value)}>
+          <option value="" disabled>
+            Size
+          </option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+
         <input
           type="text"
           value={location}
@@ -135,11 +165,23 @@ const { id } = useParams();
           value={image}
           onChange={(event) => setImage(event.target.value)}
         />
+        
+        <select
+          value={vaccinated}
+          onChange={(event) => setVaccinated(event.target.value)}>
+          <option value="" disabled>
+            Vaccinated?
+          </option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
 
         <textarea
           value={description}
           onChange={(event) => setDescription(event.target.value)}
         />
+
+
 
         <button type="submit">Save Changes</button>
       </form>

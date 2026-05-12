@@ -23,6 +23,9 @@
       "location": "Bucharest",
       "image": "https://images.unsplash.com/photo-1552053831-71594a27632d",
       "description": "Friendly and playful dog looking for a loving home.",
+      "vaccinated": false,
+      "size": "medium",
+      "gender": "male",
       "id": "1"
     },
     {
@@ -32,6 +35,9 @@
       "location": "Bucharest",
       "image": "https://www.mygoldenretrieverpuppies.com/wp-content/uploads/2020/05/Bruno-10.jpg",
       "description": "His dream is to have a new house with lovely people arround",
+      "vaccinated": false,
+      "size": "medium",
+      "gender": "male",
       "id": "2"
     },
     {
@@ -41,7 +47,22 @@
       "location": "Botosani",
       "image": "https://1.bp.blogspot.com/-AzI7rN-pO_8/X8jy6pNJPTI/AAAAAAAAQ-Q/BE6ubtVqJXcRxVjwu8cLUsFhkam-S8sswCLcBGAsYHQ/s1431/image2.jpg",
       "description": "Do I look like I can hurt someone?",
+      "vaccinated": false,
+      "size": "medium",
+      "gender": "female",
       "id": "638k9YC"
+    },
+    {
+      "name": "Chupacabra",
+      "breed": "Chihuahua",
+      "age": 2,
+      "gender": "male",
+      "size": "small",
+      "location": "Iasi",
+      "image": "https://www.rover.com/blog/wp-content/uploads/2018/11/chihuahua-810789_1920.jpg",
+      "description": "Big soul in a small body",
+      "vaccinated": true,
+      "id": "DYLLJr1"
     }
   ]
 }
