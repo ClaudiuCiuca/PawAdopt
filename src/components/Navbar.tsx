@@ -8,28 +8,31 @@ function Navbar() {
     const { user, logout } = useAuth();
     return (
         <nav>
-            <h2>PawAdopt</h2>
+            <Link to="/" className="logo">🐾 PawAdopt</Link>
 
-            <div>
-                <Link to="/">HOME</Link>
-                <Link to="/dogs">Dogs looking for a HOME!</Link>
-                <Link to="/dogs/1">Find here details about your new dog!</Link>
-                <Link to ="/dogs/add">Do you want to donate a puppy?</Link>
-                <Link to="/dogs/1/edit">Edit details about your dog</Link>
+            <div className="nav-links">
+                
                 {!user ? (
                     <>
+                        
                         <Link to="/register">
-                            First step to adopt/donate a dog!
+                            Register
                         </Link>
 
                         <Link to="/login">
-                            Login into your account!
+                            Login
                         </Link>
                     </>
                 ) : (
                     <>
+                        <Link to="/dogs">
+                            Dogs
+                        </Link>
+                        <Link to="/dogs/add">
+                            Add Dog
+                        </Link>
                         <Link to="/profile">
-                             Here is your profile!
+                             Edit profile
                         </Link>
 
                         <button onClick={logout}>

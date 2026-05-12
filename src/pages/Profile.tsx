@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useAuth } from "../features/Auth/context/useAuth";
+import "../styles/forms.css"
 
 function Profile() {
         const { user, updateUser } = useAuth();
+        const [error, setError] = useState("");
 
         const [firstName, setFirstName] = useState(
             user?.firstName || ""
@@ -18,6 +20,12 @@ function Profile() {
 
         const handleSubmit = async (event: React.FormEvent) => {
             event.preventDefault();
+            if (!firstName || !lastName || !email) {
+                setError("Please fill in all fields");
+                return;
+            }
+
+            setError("");
 
             if (!user) {
                 return;
@@ -58,9 +66,11 @@ function Profile() {
         };
 
     return (
-        <div>
+        <div className="form-page">
             <h1>Your Profile</h1>
 
+            {error && <p className="error-message">{error}</p>}
+            
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"

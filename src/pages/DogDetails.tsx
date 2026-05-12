@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link,useNavigate, useParams } from "react-router-dom";
 import ConfirmModal from "../components/ConfirmModal";
+import "../styles/dogdetails.css";
 
 
 import type { Dog } from "../types/Dog";
@@ -60,7 +61,7 @@ const handleDelete = async () => {
   }
 };
   return (
-    <div>
+    <div className="dog-details">
       <img src={dog.image} alt={dog.name} width="400px" />
 
       <h1>{dog.name}</h1>
@@ -69,13 +70,13 @@ const handleDelete = async () => {
       <p>{dog.age} years old</p>
       <p>{dog.location}</p>
       <p>{dog.description}</p>
-
-      <Link to={`/dogs/${dog.id}/edit`}>Edit Dog</Link>
-      <button onClick = {() => setShowModal(true)}>Delete Dog</button>
-
+      <div className="dog-actions">
+        <Link to={`/dogs/${dog.id}/edit`}>Edit Dog</Link>
+        <button className="adopt-button" onClick = {() => setShowModal(true)}>Adopt</button>
+      </div>
     {showModal && (
         <ConfirmModal
-            message="Has this dog been adopted?"
+            message="Do you want to adopt me?"
             onConfirm={handleDelete}
             onCancel={() => setShowModal(false)}>
         </ConfirmModal>

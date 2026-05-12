@@ -1,0 +1,82 @@
+.dog-details {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dog-details img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+}
+
+.dog-details h1 {
+  margin-top: 20px;
+  color: #7c3aed;
+}
+
+.dog-details p {
+  margin-top: 10px;
+}
+
+.dog-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.dog-actions a,
+.dog-actions button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  background-color: #7c3aed;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .dog-details {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .dog-actions {
+    flex-direction: column;
+  }
+}
+.dog-actions button,
+.dog-actions a {
+ display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 44px;
+  min-width: 140px;
+
+  padding: 0 16px;
+
+  border-radius: 8px;
+  border: none;
+
+  text-decoration: none;
+
+  background-color: #7c3aed;
+  color: white;
+
+  font-size: 17px;
+  font-family: inherit;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+.adopt-button {
+  background-color: #16a34a !important;
+}

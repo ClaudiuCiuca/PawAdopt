@@ -45,6 +45,7 @@ export function Login() {
   }  
 
   return (
+    <div className="form-page">
     <form className="brandForm" onSubmit={handleSubmit}>
       <h1>Login</h1>
 
@@ -70,5 +71,6 @@ export function Login() {
 
       <button type="submit">Login</button>
     </form>
+    </div>
   );
 }

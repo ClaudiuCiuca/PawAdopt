@@ -4,3 +4,11 @@
   flex-wrap: wrap;
   padding: 32px;
 }
+
+@media (max-width: 768px) {
+  .dogs-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+}

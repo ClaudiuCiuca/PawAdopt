@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import "../styles/forms.css"
 
 function EditDog() {
 const { id } = useParams();
@@ -13,6 +14,7 @@ const { id } = useParams();
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [error, setError] = useState("");
+  const [vaccinated, setVaccinated] = useState(false);
 
   useEffect(() => {
     const fetchDog = async () => {
@@ -33,6 +35,7 @@ const { id } = useParams();
         setLocation(data.location);
         setImage(data.image);
         setDescription(data.description);
+        setVaccinated(data.vaccinated);
       } catch (error) {
         console.log(error);
       }
@@ -71,6 +74,7 @@ const { id } = useParams();
       location,
       image,
       description,
+      vaccinated,
     };
 
     try {
@@ -96,11 +100,11 @@ const { id } = useParams();
   };
 
   return (
-    <div>
+    <div className="form-page">
       <h1>Edit Dog details </h1>
 
-        {error && <p>{error}</p>}
-        
+        {error && <p className="error-message">{error}</p>}
+
       <form onSubmit={handleSubmit}>
         <input
           type="text"

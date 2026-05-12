@@ -9,38 +9,30 @@
     },
     {
       "email": "mihaela.ciuca@gmail.com",
-      "password": "$2a$10$hq9EynOwAHw9z2Y/YqGBreYcQiTf02AWh558ijMG8f07iLpTnae7G",
+      "password": "$2a$10$k3MX0H0EbAxrIn./ELde1utdkmUsh.t2n7NpnqajkOsbJZTYQ7JVy",
       "firstName": "Mihaela",
-      "lastName": "Ciuca ",
+      "lastName": "Ciuca",
       "id": 2
     }
   ],
   "dogs": [
     {
-      "id": "1",
       "name": "Max",
       "breed": "Golden Retriever",
-      "age": 2,
-      "gender": "male",
-      "size": "large",
+      "age": 1,
       "location": "Bucharest",
       "image": "https://images.unsplash.com/photo-1552053831-71594a27632d",
       "description": "Friendly and playful dog looking for a loving home.",
-      "vaccinated": true,
-      "adoptionFee": 5
+      "id": "1"
     },
     {
-      "id": "2",
       "name": "Bruno",
       "breed": "Golden Retriever",
       "age": 4,
-      "gender": "male",
-      "size": "large",
       "location": "Bucharest",
       "image": "https://www.mygoldenretrieverpuppies.com/wp-content/uploads/2020/05/Bruno-10.jpg",
       "description": "His dream is to have a new house with lovely people arround",
-      "vaccinated": true,
-      "adoptionFee": 5
+      "id": "2"
     },
     {
       "name": "Bibi",

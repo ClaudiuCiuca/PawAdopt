@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/forms.css"
 
 
 function AddDog() {
@@ -11,7 +12,7 @@ const navigate = useNavigate();
   const [location, setLocation] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
-  const [vaccinated, setVaccinated] = useState("false");
+  const [vaccinated, setVaccinated] = useState("");
   const [error, setError] = useState("");
 
 
@@ -44,6 +45,7 @@ const navigate = useNavigate();
       location,
       image,
       description,
+      vaccinated,
     };
 
     try {
@@ -66,10 +68,10 @@ const navigate = useNavigate();
   };
 
   return (
-    <div>
+    <div className="form-page">
       <h1>Share details about the dog you want to donate:</h1>
 
-      {error && <p>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
 
       <form onSubmit={handleSubmit}>
         <input
@@ -107,12 +109,22 @@ const navigate = useNavigate();
           onChange={(event) => setImage(event.target.value)}
         />
 
-        <input
-          type="boolean"
-          placeholder="Vaccinated?"
+          <select
           value={vaccinated}
-          onChange={(event) => setVaccinated(event.target.value)}
-        />
+          onChange={(event) => setVaccinated(event.target.value)}>
+
+          <option value="" disabled>
+            Vaccinated?
+          </option>
+
+          <option value="yes">
+            Yes
+          </option>
+
+          <option value="no">
+            No
+          </option>
+</select>
 
         <textarea
           placeholder="Description"
