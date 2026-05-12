@@ -12,6 +12,7 @@ const { id } = useParams();
   const [location, setLocation] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchDog = async () => {
@@ -42,6 +43,26 @@ const { id } = useParams();
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+
+        if(
+        !name ||
+        !breed ||
+        !location ||
+        !image ||
+        !description
+      ) { setError ("Please fill in all the fields"); 
+
+        return;
+      }
+
+      if (age <=0 ) {
+        setError("Age must be greater than 0");
+        
+        return;
+      }
+
+      setError("");
+
 
     const updatedDog = {
       name,
@@ -76,8 +97,10 @@ const { id } = useParams();
 
   return (
     <div>
-      <h1>Edit Dog</h1>
+      <h1>Edit Dog details </h1>
 
+        {error && <p>{error}</p>}
+        
       <form onSubmit={handleSubmit}>
         <input
           type="text"

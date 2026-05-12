@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link,useNavigate, useParams } from "react-router-dom";
+import ConfirmModal from "../components/ConfirmModal";
 
 
 import type { Dog } from "../types/Dog";
@@ -11,6 +12,7 @@ function DogDetails() {
     const navigate = useNavigate();
 
   const [dog, setDog] = useState<Dog | null>(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const fetchDog = async () => {
@@ -38,13 +40,7 @@ function DogDetails() {
     return <h1>Loading...</h1>;
   }
 const handleDelete = async () => {
-  const confirmDelete = window.confirm(
-    "Are you sure you want to delete this dog?"
-  );
 
-  if (!confirmDelete) {
-    return;
-  }
 
   try {
     const response = await fetch(
@@ -75,7 +71,16 @@ const handleDelete = async () => {
       <p>{dog.description}</p>
 
       <Link to={`/dogs/${dog.id}/edit`}>Edit Dog</Link>
-      <button onClick={handleDelete}>Delete Dog</button>
+      <button onClick = {() => setShowModal(true)}>Delete Dog</button>
+
+    {showModal && (
+        <ConfirmModal
+            message="Has this dog been adopted?"
+            onConfirm={handleDelete}
+            onCancel={() => setShowModal(false)}>
+        </ConfirmModal>
+    )}
+      
     </div>
   );
 }

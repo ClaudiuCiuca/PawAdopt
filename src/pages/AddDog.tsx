@@ -12,9 +12,30 @@ const navigate = useNavigate();
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [vaccinated, setVaccinated] = useState("false");
+  const [error, setError] = useState("");
+
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+
+      if(
+        !name ||
+        !breed ||
+        !location ||
+        !image ||
+        !description
+      ) { setError ("Please fill in all the fields"); 
+
+        return;
+      }
+
+      if (age <=0 ) {
+        setError("Age must be greater than 0");
+        
+        return;
+      }
+
+      setError("");
 
     const newDog = {
       name,
@@ -47,6 +68,8 @@ const navigate = useNavigate();
   return (
     <div>
       <h1>Share details about the dog you want to donate:</h1>
+
+      {error && <p>{error}</p>}
 
       <form onSubmit={handleSubmit}>
         <input

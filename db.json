@@ -6,6 +6,13 @@
       "firstName": "Stefan",
       "lastName": "Ciuca",
       "id": 1
+    },
+    {
+      "email": "mihaela.ciuca@gmail.com",
+      "password": "$2a$10$hq9EynOwAHw9z2Y/YqGBreYcQiTf02AWh558ijMG8f07iLpTnae7G",
+      "firstName": "Mihaela",
+      "lastName": "Ciuca ",
+      "id": 2
     }
   ],
   "dogs": [
@@ -34,15 +41,6 @@
       "description": "His dream is to have a new house with lovely people arround",
       "vaccinated": true,
       "adoptionFee": 5
-    },
-    {
-      "name": "Giani",
-      "breed": "Metis",
-      "age": 4,
-      "location": "Buzau",
-      "image": "https://tse3.mm.bing.net/th/id/OIP.WQclLVyJoarVkUfjW1hAUwHaFj?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
-      "description": "I don't have a pedigree but I like a lot Pedigree",
-      "id": "K0LskbDDUXM"
     },
     {
       "name": "Bibi",
