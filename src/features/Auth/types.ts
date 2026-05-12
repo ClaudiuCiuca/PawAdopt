@@ -13,5 +13,6 @@ export type Auth = {
 export type AuthContextValue = Auth & {
   login: (data: Auth) => void;
   logout: () => void;
+  updateUser: (user: Auth["user"]) => void;
 };
 

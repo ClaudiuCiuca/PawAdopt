@@ -3,7 +3,7 @@
     {
       "email": "claudiu.ciuca@gmail.com",
       "password": "$2a$10$B39xJBz7ImoC/Trh6R.pleWu8FMOqSw5b/0VY5EmZuhm.SpEC0ROW",
-      "firstName": "Claudiu",
+      "firstName": "Stefan",
       "lastName": "Ciuca",
       "id": 1
     }
@@ -52,6 +52,15 @@
       "image": "https://puppysingapore.com/wp-content/uploads/2019/06/Bichon-puppy.png",
       "description": "If you need a toy, adopt me",
       "id": "RaiPJDxJ7qE"
+    },
+    {
+      "name": "Cici",
+      "breed": "Pitbull",
+      "age": 6,
+      "location": "Botosani",
+      "image": "https://1.bp.blogspot.com/-AzI7rN-pO_8/X8jy6pNJPTI/AAAAAAAAQ-Q/BE6ubtVqJXcRxVjwu8cLUsFhkam-S8sswCLcBGAsYHQ/s1431/image2.jpg",
+      "description": "Do I look like I can hurt someone?",
+      "id": "638k9YC"
     }
   ]
 }

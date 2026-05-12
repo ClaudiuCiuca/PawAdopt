@@ -18,8 +18,12 @@ export function AuthContextProvider({ children }: { children: ReactNode }) {
   function logout() {
    removeAuth();
   }
-
+  function updateUser(user: Auth["user"]) {
+    setAuth({
+      ...auth, user,
+    })
+  }
   return (
-    <AuthContext value={{ ...auth, login, logout }}>{children}</AuthContext>
+    <AuthContext value={{ ...auth, login, logout, updateUser,}}>{children}</AuthContext>
   );
 }

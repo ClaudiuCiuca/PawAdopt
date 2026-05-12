@@ -26,12 +26,12 @@ function Adopt() {
         <AddDog />
         </ProtectedRoute>}>
       </Route>
-      <Route path="/dogs/:id" element={<ProtectedRoute>
+      <Route path="/dogs/:id" element={<DogDetails />}></Route>
+      <Route path="/dogs" element={<Dogs />}></Route>
+      <Route path="/dogs/:id/edit" element={<ProtectedRoute>
         <EditDog />
         </ProtectedRoute>}>
       </Route>
-      <Route path="/dogs" element={<Dogs />}></Route>
-      <Route path="/dogs/:id/edit" element={<EditDog />}></Route>
       <Route path="/" element={<Home />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="*" element={<NotFound />}></Route>
