@@ -18,7 +18,7 @@ const navigate = useNavigate();
   const [size, setSize] = useState("");
   
 
-  const handleSubmit = async (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.SubmitEvent) => {
     event.preventDefault();
 
       if(

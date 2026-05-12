@@ -71,7 +71,10 @@ const handleDelete = async () => {
 
       <p>{dog.breed}</p>
       <p>{dog.age} years old</p>
+      <p>Gender: {dog.gender}</p>
+      <p>Size: {dog.size}</p>
       <p>{dog.location}</p>
+      <p>Vaccinated:{dog.vaccinated ? " Yes" : " No"}</p>
       <p>{dog.description}</p>
       <div className="dog-actions">
         <Link to={`/dogs/${dog.id}/edit`}>Edit Dog</Link>

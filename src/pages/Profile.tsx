@@ -19,7 +19,7 @@ function Profile() {
             user?.email || ""
         );
 
-        const handleSubmit = async (event: React.FormEvent) => {
+        const handleSubmit = async (event: React.SubmitEvent) => {
             event.preventDefault();
             if (!firstName || !lastName || !email) {
                 setError("Please fill in all fields");

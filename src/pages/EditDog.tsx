@@ -48,7 +48,7 @@ const { id } = useParams();
     fetchDog();
   }, [id]);
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async ( event: React.SubmitEvent) => {
     event.preventDefault();
 
         if(
@@ -165,7 +165,7 @@ const { id } = useParams();
           value={image}
           onChange={(event) => setImage(event.target.value)}
         />
-        
+
         <select
           value={vaccinated}
           onChange={(event) => setVaccinated(event.target.value)}>
