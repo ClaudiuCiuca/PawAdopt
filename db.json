@@ -3,7 +3,7 @@
     {
       "email": "claudiu.ciuca@gmail.com",
       "password": "$2a$10$B39xJBz7ImoC/Trh6R.pleWu8FMOqSw5b/0VY5EmZuhm.SpEC0ROW",
-      "firstName": "Stefan",
+      "firstName": "Claudiu",
       "lastName": "Ciuca",
       "id": 1
     },
@@ -33,15 +33,6 @@
       "image": "https://www.mygoldenretrieverpuppies.com/wp-content/uploads/2020/05/Bruno-10.jpg",
       "description": "His dream is to have a new house with lovely people arround",
       "id": "2"
-    },
-    {
-      "name": "Bibi",
-      "breed": "Bichone",
-      "age": 2,
-      "location": "Buzau",
-      "image": "https://puppysingapore.com/wp-content/uploads/2019/06/Bichon-puppy.png",
-      "description": "If you need a toy, adopt me",
-      "id": "RaiPJDxJ7qE"
     },
     {
       "name": "Cici",

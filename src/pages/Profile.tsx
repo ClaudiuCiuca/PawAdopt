@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../features/Auth/context/useAuth";
 import "../styles/forms.css"
+import { toast } from "react-toastify";
 
 function Profile() {
         const { user, updateUser } = useAuth();
@@ -56,10 +57,10 @@ function Profile() {
                 updateUser(data);
 
 
-                alert("Profile updated successfully!");
+                toast.success("Profile updated successfully!");
             } 
             catch (error) {
-                console.log(error);
+                toast.error("Something went wrong. Please try again");
 
             }
 

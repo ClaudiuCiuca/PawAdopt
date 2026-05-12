@@ -62,6 +62,9 @@ const handleDelete = async () => {
 };
   return (
     <div className="dog-details">
+      <Link to="/dogs" className="back-button">
+        ← Back to Dogs
+      </Link>
       <img src={dog.image} alt={dog.name} width="400px" />
 
       <h1>{dog.name}</h1>

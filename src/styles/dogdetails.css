@@ -80,3 +80,18 @@
 .adopt-button {
   background-color: #16a34a !important;
 }
+.back-button {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #7c3aed;
+
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+.back-button:hover {
+  color: #5b21b6;
+}

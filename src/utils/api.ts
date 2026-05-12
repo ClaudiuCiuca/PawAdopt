@@ -74,7 +74,7 @@ export class Api {
     fetchInit.headers = this.headers;
 
     return fetch(`${baseUrl}${urlEnding}`, fetchInit)
-      .then(this.handleResponse.bind(this)<R>);
+      .then((res) => this.handleResponse<R>(res));
   }
 
   public create<R>(body: unknown) {
