@@ -9,5 +9,5 @@ export type Dog = {
     image: string;
     description: string;
     vaccinated: boolean;
-    adoptionFee: string;
+    
 };

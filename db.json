@@ -56,12 +56,12 @@
       "name": "Chupacabra",
       "breed": "Chihuahua",
       "age": 2,
-      "gender": "male",
-      "size": "small",
       "location": "Iasi",
       "image": "https://www.rover.com/blog/wp-content/uploads/2018/11/chihuahua-810789_1920.jpg",
       "description": "Big soul in a small body",
       "vaccinated": true,
+      "size": "small",
+      "gender": "male",
       "id": "DYLLJr1"
     }
   ]
